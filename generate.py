@@ -56,7 +56,7 @@ def generate_index(headings, use_links=True, use_numbering=False):
         if use_links:
             line = f"{indent}- {icon} [{label}](#{slug})" if icon else f"{indent}- [{label}](#{slug})"
         else:
-            line = f"{indent}- {icon} {label}".strip()
+            line = f"{indent}- {icon} {label}" if icon else f"{indent}- {label}"
 
         index_lines.append(line)
 
